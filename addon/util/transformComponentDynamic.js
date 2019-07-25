@@ -38,7 +38,7 @@ module.exports = function (renderer, Comp, dynamicTemplate) {
         var className = (props.className || '') + dynamicClassName;
 
         if (process.env.NODE_ENV !== 'production') {
-            return require('react').cloneElement(element, Object.assign({}, props, {
+            return require('preact').cloneElement(element, Object.assign({}, props, {
                 className: className
             }), props.children);
         }
