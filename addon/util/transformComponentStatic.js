@@ -12,6 +12,8 @@ module.exports = function (renderer, prototype, styles, block) {
                 className = renderer.rule(styles, block);
             }
 
+            element.props = element.props || {};
+            
             if (process.env.NODE_ENV === 'production') {
                 element.props.className = (element.props.className || '') + className;
             } else {
