@@ -15,7 +15,7 @@ module.exports = function (renderer, prototype, styles, block) {
             if (process.env.NODE_ENV === 'production') {
                 element.props.className = (element.props.className || '') + className;
             } else {
-                element = require('react').cloneElement(element, {
+                element = require('preact').cloneElement(element, {
                     className: (element.props.className || '') + className,
                 });
             }
